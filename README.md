@@ -22,3 +22,8 @@
 
 - [express4.x api](http://expressjs.com/4x/api.html)
 
+## 说明
+
+安装express 4.x依赖模块
+
+`npm install serve-favicon morgan method-override express-session body-parser multer errorhandler express@latest jade@latest --save`

@@ -1,10 +1,10 @@
-## 2.0.0版本预计更新点：
+## 2.0.0版本更新点：
 
 - 升级到express4.x
 
 - 精简前端资源，优化grunt配置
 
-- 前端默认整合`bootstrap`
+- 前端资源默认整合`bootstrap-3.3.2` `jquery-1.10.1` `backbone-1.1.2`
 
 - 将原有默认的`velocity`模版引擎改为`jade`模版引擎
 
@@ -24,6 +24,11 @@
 
 ## 说明
 
-安装express 4.x依赖模块
+git clone git@github.com:ar-insect/spider-2.0.0.git
 
-`npm install serve-favicon morgan method-override express-session body-parser multer errorhandler express@latest jade@latest --save`
+npm install && grunt
+
+node app.js
+
+localhost:3000
+

@@ -1,8 +1,8 @@
 // var sys = require('sys');
 var fs = require('fs');
 var _ = require('lodash');
-var cwd = process.cwd();
-var config = require('./config');
+//var cwd = process.cwd();
+var config = require('../config');
 // default ui config
 var uiConfig = config.ui;
 

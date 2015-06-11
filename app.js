@@ -7,7 +7,7 @@ var express = require('express');
 var config = require('./config');
 var routes = require('./routes/routes');
 var _ = require('lodash');
-var ui = require('./ui');
+var ui = require('./ui/uiSvr');
 var viewsWares = require('./middlewares/views');
 // 注意：原来express3.x的中间件改为模块方式引入
 var bodyParser = require('body-parser');

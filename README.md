@@ -24,11 +24,11 @@
 
 ## 说明
 
-git clone git@github.com:ar-insect/spider-2.0.0.git
+`git clone git@github.com:ar-insect/spider-2.0.0.git`
 
-npm install && grunt
+`npm install && grunt`
 
-node app.js
+`node app.js`
 
-localhost:3000
+`localhost:3000`
 

@@ -1,13 +1,12 @@
 var config = require('../../config');
 var ui = require('../../ui');
 var cwd = process.cwd();
-var fs = require('fs');
+//var fs = require('fs');
 var _ = require('lodash');
 
 module.exports = function(path, options, func) {
     try {
         var filepath;
-        var jadeString;
         var glue;
         var uiConfig = ui.config(path);
         var module = uiConfig.module;
@@ -17,18 +16,16 @@ module.exports = function(path, options, func) {
         uiConfig.__head = ui.util.getHead(uiConfig.__head);
         uiConfig.__screen = ui.util.getScreen([module, body]);
         uiConfig.__foot = ui.util.getFoot(uiConfig.__foot);
-        // 转换相对路径，因为jade读取模板需要相对路径
-        uiConfig.__head = uiConfig.__head.replace(/^(views\/)(\S*)$/, '../../../../$2');
-        uiConfig.__screen = '../' + uiConfig.__screen.substr(uiConfig.__screen.lastIndexOf('screen'));
-        uiConfig.__foot = uiConfig.__foot.replace(/^(views\/)(\S*)$/, '../../../../$2');
         glue = _.merge({ ui: uiConfig }, options);
         // TODO: 处理内联脚本
         //uiConfig.__script = jade.render(uiConfig.__script, glue);
+        // 因为jade不支持在模板中include variable所以要在此处直接处理掉
+        uiConfig.__head = jade.renderFile(uiConfig.__head, glue);
+        uiConfig.__screen = jade.renderFile(uiConfig.__screen, glue);
+        uiConfig.__foot = jade.renderFile(uiConfig.__foot, glue);
         filepath = ui.util.getLayout([cwd, module, layout]);
         try {
-            //jadeString = fs.readFileSync(filepath).toString();
-            //func(null, jade.render(jadeString, glue));
-            // mark：不能用fs.readFileSync读取字符流，需要用jade.renderFile否则include出不来。（不知何原因？）
+            // mark：不能用fs.readFileSync读取字符流，需要用jade.renderFile
             func(null, jade.renderFile(filepath, glue));
         } catch (e) {
         }

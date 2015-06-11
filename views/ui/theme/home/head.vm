@@ -1,0 +1,25 @@
+#*
+ * @description: HOME自定义头部
+ *#
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="zh"><![endif]-->
+<html class="no-js" lang="zh">
+    <head>
+        <meta charset="$ui.charset" />
+        <!-- If you delete this meta tag World War Z will become a reality -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>$!ui.title</title>
+    	## 配置css
+        #SLITERAL($ui.css)
+        #SLITERAL($ui.__style)
+        <script src="/assets/$.js" charset="utf-8"></script>
+    </head>
+    <body>
+<!-- Header and Nav -->
+      <div class="row">
+        <div class="large-3 columns">
+          <h1>spider</h1>
+        </div>
+        #cmsparse("component/nav.vm")
+      </div>
+<!-- End Header and Nav -->

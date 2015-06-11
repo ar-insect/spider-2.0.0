@@ -1,3 +1,5 @@
+'use strict';
+
 //var fs = require('fs');
 var path = require('path');
 var http = require('http');
@@ -25,7 +27,7 @@ app.use(bodyParser.json());
 // express4.x只保留了`static`中间件
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
-app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 // rewrite res.render
 app.use(viewsWares.render);
 

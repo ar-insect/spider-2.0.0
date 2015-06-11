@@ -1,0 +1,8 @@
+<div class="large-9 columns">
+      <ul class="button-group round right">
+        <li><a href="/"class="button #if($!ui.module == "home")alert#end">首页</a></li>
+        <li><a href="/use/" class="button #if($!ui.module == "use")alert#end">下载及使用</a></li>
+        <li><a href="#" class="button">开发及构建</a></li>
+        <li><a href="#" class="button">问与答</a></li>
+      </ul>
+</div>

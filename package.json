@@ -1,9 +1,34 @@
 {
   "name": "spider",
   "version": "2.0.0",
-  "private": true,
+  "homepage": "https://github.com/ar-insect/spider-2.0.0",
+  "author": {
+    "name": "'ar.insect'",
+    "email": "'ar.insect@gmail.com'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ar-insect/spider-2.0.0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ar-insect/spider-2.0.0/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "scripts": {
-    "start": "node app.js"
+    "test": "node app.js"
+  },
+  "alias": {
+    "jquery": "jquery/1.10.1/jquery",
+    "underscore": "underscore/1.6.0/underscore",
+    "backbone": "backbone/1.1.2/backbone"
   },
   "dependencies": {
     "body-parser": "^1.12.4",
@@ -16,6 +41,20 @@
     "method-override": "^2.3.3",
     "morgan": "^1.5.3",
     "multer": "^0.1.8",
-    "serve-favicon": "^2.2.1"
+    "serve-favicon": "^2.2.1",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-cmd-concat": "^0.2.8",
+    "grunt-cmd-transport": "^0.4.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "~0.7.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-css-import": "^0.1.6",
+    "grunt-csscomb": "^3.0.0",
+    "grunt-rename": "^0.1.4"
   }
 }

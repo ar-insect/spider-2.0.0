@@ -16,6 +16,8 @@
             }
         },
         "index": {
+            "css": ["global/1.0.0/index.css"],
+            "js": [],
             "vars": {
             }
         }

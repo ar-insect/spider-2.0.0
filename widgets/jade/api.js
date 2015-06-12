@@ -1,5 +1,5 @@
 var config = require('../../config');
-var ui = require('../../uiSvr');
+var ui = require('../uiSvr');
 var cwd = process.cwd();
 //var fs = require('fs');
 var _ = require('lodash');

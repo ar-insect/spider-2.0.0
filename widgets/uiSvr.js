@@ -1,3 +1,8 @@
+/**
+ * 作为view和controller中间的层，也是为view层服务的。
+ * 起到view层的配置，布局，将js、css和模板层隔离开。
+ */
+
 // var sys = require('sys');
 var fs = require('fs');
 var _ = require('lodash');

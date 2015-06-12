@@ -25,10 +25,12 @@ app.use(cookieParser(config.authCookieSecret));
 // 参考：https://github.com/ar-insect/body-parser#express-route-specific
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+// https://github.com/expressjs/session#cookie-options
 app.use(session({
+  secret: config.sessionSecret,
   resave: false,
   saveUninitialized: true,
-  secret: config.sessionSecret
+  cookie: { secure: true }
 }));
 // express4.x只保留了`static`中间件
 // 静态资源目录

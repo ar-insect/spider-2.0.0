@@ -1,25 +1,27 @@
 {
-    "default": {
-        "css": [],
-        "js": [],
-        "head": "theme/home",
-        "foot": "theme/home",
-        "vars": {
-            "title": "首页"
-        }
-    },
-    "page": {
-        "404": {
-            "vars": {
-                "layout": "null",
-                "title": "页面未找到"
-            }
-        },
-        "index": {
-            "css": ["global/1.0.0/index.css"],
-            "js": [],
-            "vars": {
-            }
-        }
+  "default": {
+    "css": [],
+    "js": [],
+    "head": "theme/home",
+    "foot": "theme/home",
+    "vars": {
+      "title": "首页"
     }
+  },
+  "page": {
+    "404": {
+      "vars": {
+        "layout": "null",
+        "title": "页面未找到"
+      }
+    },
+    "index": {
+      "css": [
+        "global/1.0.0/index.css"
+      ],
+      "js": [],
+      "vars": {
+      }
+    }
+  }
 }

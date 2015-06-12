@@ -1,14 +1,14 @@
 
 .feature {
-    list-style-type: decimal ;
-    padding: 0 0 0 24px;
+  list-style-type: decimal;
+  padding: 0 0 0 24px;
 }
 
 .feature li {
-    display: list-item;
+  display: list-item;
 }
 
 .feature li p {
-    display: block;
-    margin: 1em;
+  display: block;
+  margin: 1em;
 }

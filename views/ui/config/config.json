@@ -1,12 +1,12 @@
 {
-    "css": [],
-    "js": [],
-    "head": "theme/default",
-    "foot": "theme/default",
-    "vars": {
-        "title": "Spider 前端本地开发脚手架",
-        "charset": "UTF-8",
-        "contentType": "text/html",
-        "logo": "/images/spider.png"
-    }
+  "css": [],
+  "js": [],
+  "head": "theme/default",
+  "foot": "theme/default",
+  "vars": {
+    "title": "Spider 前端本地开发脚手架",
+    "charset": "UTF-8",
+    "contentType": "text/html",
+    "logo": "/images/spider.png"
+  }
 }

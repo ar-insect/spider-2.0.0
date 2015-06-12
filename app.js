@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views/templates'));
 app.use(cookieParser());
 // 这里的调用需注意：`bodyParser`不能直接调用了！
 // 参考：https://github.com/ar-insect/body-parser#express-route-specific
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 // express4.x只保留了`static`中间件
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -45,14 +45,14 @@ if (config.debug) {
 
 // 模板引擎
 var templateEngine = require('./widgets/' + config.template.name + '/api');
-app.engine( config.template.extension, config.template.callback(templateEngine) );
+app.engine(config.template.extension, config.template.callback(templateEngine));
 // set port
 app.set('port', process.env.PORT || 3000);
 var port = process.argv[2];
 port = /^\d{4,5}$/.test(port) ? port : app.get('port');
-http.createServer(app).listen(port, function() {
+http.createServer(app).listen(port, function () {
   console.log('Server listening on port ' + port);
-}).on('error', function(err) {
+}).on('error', function (err) {
   console.log('Error', err.code);
 });
 

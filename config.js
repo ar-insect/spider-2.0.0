@@ -7,7 +7,9 @@ var _ = require('lodash');
 
 var config = {
   debug: true,
-  name: 'sprider development resources',
+  name: 'sprider',
+  version: pkg.version,
+  description: 'spider是用node.js本地开发的建站框架' ,
   ui: {
     css: '',
     js: '',
@@ -44,9 +46,10 @@ var config = {
    }
    },
    */
-  version: pkg.version,
   // site sittings
-  host: '10.63.73.38',
+  sessionSecret: 'spider',
+  authCookieSecret: 'spider',
+  host: 'localhost',
   assetsServer: '', // 静态文件存储域名
   charset: 'UTF-8',
   keywords: 'front local development resources..',

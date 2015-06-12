@@ -1,6 +1,7 @@
 {
   "name": "spider",
   "version": "2.0.0",
+  "main": "app.js",
   "homepage": "https://github.com/ar-insect/spider-2.0.0",
   "author": {
     "name": "'ar.insect'",
@@ -13,12 +14,6 @@
   "bugs": {
     "url": "https://github.com/ar-insect/spider-2.0.0/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": ""
-    }
-  ],
   "engines": {
     "node": ">= 0.10.0"
   },
